@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ted Moso - Contact Us</title>
-    </head>
-    <body>
-        <form action="#" method="POST">
-            <div>
-                <label id="FirstNameLabel" for="FirstName">First Name</label>
-                <input id="FirstName" name="FirstName" type="text"/>
-            </div>
-        </form>
-    </body>
+
+<head>
+    <title>Ted Moso - Contact Us</title>
+    <style>
+        td {
+            text-align: right;
+        }
+        .mytext {
+            width: 223px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <table style="margin:0;">
+            <tr>
+                <td><label id="FirstNameLabel" for="FirstName">First Name: </label></td>
+                <td><input id="FirstName" name="FirstName" type="text" class="mytext"/></td>
+            </tr>
+            <tr>
+                <td><label id="LastNameLabel" for="LastName">Last Name: </label></td>
+                <td><input id="LastName" name="LastName" type="text" class="mytext"/></td>
+            </tr>
+            <tr>
+                <td><label id="EmailLabel" for="Email">Email: </label></td>
+                <td><input id="Email" name="Email" type="text" class="mytext"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Type of License</label>
+                </td>
+                <td>
+                    <input id="BusinessLicense" name="License" type="radio" value="Business" checked/>
+                    <label id="BusinessLicenseLabel" for="BusinessLicense">Business</label>
+                    <input id="PersonalLicense" name="License" type="radio" value="Personal" />
+                    <label id="PersonalLicenseLabel" for="PersonalLicense">Personal</labels>
+                </td>
+            </tr>
+            <tr>
+                <td><label id="ReasonLabel" for="Reason">Reason: </label></td>
+                <td><select>
+                    <option>Select a Reason:</option>
+                    <option value="SoftwareSupport">Software Support</option>
+                    <option value="HardwareSupport">Hardware Support</option>
+                    <option value="InformationRequest">Information Request</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="vertical-align: top;"><label id="AdditionalInfoLabel" for="AdditionalInfo">Additional Information: </label></td>
+                <td><textarea id="AdditionalInfo" name="AdditionalInfo" rows="4" cols="29"></textarea></td>
+            </tr>
+            <tr>
+                <td><input id="Terms" name="Terms" type="checkbox" />
+                <label id="TermsLabel" for="Terms">I have read the terms of service.</label></td>
+            </tr>
+            <tr>
+                <td><input id="SubmitButton" type="submit" value="Send Request" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
 </html>
